@@ -27,6 +27,7 @@ export class BookingService {
     return this.http.get<Booking>(this.baseurl + id);
    }
 
+   //Update the data into the database
    updateAppointment(id, bookRequest: Booking): Observable<Booking> {
     const updateRequest: UpdateAppointment = {
       name: bookRequest.name,
@@ -42,10 +43,12 @@ export class BookingService {
     return this.http.put<Booking>(this. baseurl  + id, updateRequest);
   }
 
+  //delete the data from database
   deleteAppointment(id): Observable<Booking> {
     return this.http.delete<Booking>(this.baseurl +id);
   }
 
+  //Adding the data 
   addAppointment(bookRequest: Booking): Observable<Booking> {
     const addRequest: Addappointment = {
       name: bookRequest.name,

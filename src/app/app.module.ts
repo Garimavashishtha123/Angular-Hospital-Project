@@ -100,7 +100,8 @@ import { HeaderComponent } from './header/header.component';
       {path:'Our-Services',component:OurServicesComponent},
       {path:'Free-Checkup',component:FreeCheckupComponent},
       {path:'Booking-list',component:AppointmentListComponent},
-      {path:'Book-Appointment', component:AppointmentformComponent}
+      {path:'Book-Appointment', component:AppointmentformComponent},
+      {path:'cart',component:CartComponent},
     ]),
 
     BrowserAnimationsModule

@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Booking } from '../booking';
+import { MatSliderModule } from '@angular/material/slider';
 
 @Component({
   selector: 'app-appointment-list',
@@ -12,7 +13,7 @@ import { Booking } from '../booking';
 })
 export class AppointmentListComponent implements OnInit {
   book: Booking[] = [];
-  displayedColumns: string[] = ['name','phone','email','dob', 'appdate','apptime','dname','edit'];
+  displayedColumns: string[] = ['name','phone','email','dob','appdate','apptime','dname','edit'];
   dataSource: MatTableDataSource<Booking> = new MatTableDataSource<Booking>();
   @ViewChild(MatPaginator) matPaginator!: MatPaginator;
   @ViewChild(MatSort) matSort!: MatSort;
@@ -43,6 +44,7 @@ export class AppointmentListComponent implements OnInit {
       );
 
   }
+  //Filter the data 
   filterList() {
     this.dataSource.filter = this.filterString.trim().toLowerCase();
   }

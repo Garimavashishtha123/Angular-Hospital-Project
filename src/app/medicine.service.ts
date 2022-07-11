@@ -12,7 +12,7 @@ export class MedicineService {
   constructor(private http : HttpClient) { }
 
   getProduct():Observable<Medicine[]>{
-    return this.http.get<Medicine[]>("http://localhost:3000/posts");
+    return this.http.get<Medicine[]>("https://localhost:44355/Medicine");
   //    .pipe(map((res:any)=>{
   //      return res;
   //    }))

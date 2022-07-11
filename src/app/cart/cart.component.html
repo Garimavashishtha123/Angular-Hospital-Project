@@ -1,9 +1,10 @@
-<p>cart works!</p>
+
 <ng-container *ngIf="products.length !=0">
     <div class="container">
         <div class="card-table">
             <div class="cart-product">
                 <table class="table table-responsive">
+<!-- cart Table -->
                     <thead>
                         <tr>
                             <th>Sr.No</th>
@@ -17,6 +18,8 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        <!--Cart values comming from database-->
                         <tr *ngFor="let item of products; let i = index">
                             <td>{{i+1}}</td>
                             <td>{{item.title}}</td>
@@ -32,8 +35,8 @@
                         <tr>
                             <td colspan="4"></td>
                             <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
-                            <td><button routerLink="/Book-Medicine" class="btn btn-primary">Shop More</button></td>
-                            <!-- <td><button class="btn btn-success" (click)="openDialog()" >Checkout</button></td> -->
+                            <td><button routerLink="/book-Medicine" class="btn btn-primary">Shop More</button></td>
+                            <td><button class="btn btn-success">Checkout</button></td>
                             <td><strong>Grand Total : Rs.{{grandTotal}}</strong></td>
                         </tr>
                     </tbody>
@@ -43,7 +46,7 @@
     </div>
 </ng-container>
 
-
+<!--Degin of the cart-->
 <ng-container *ngIf="products.length ==0">
     <div class="container">
         <div class="card">

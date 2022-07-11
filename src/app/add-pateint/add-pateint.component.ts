@@ -29,16 +29,12 @@ export class AddPateintComponent implements OnInit {
 
   }
   
-
-  // @ViewChild('AppointmentDetailsForm') AppointmentDetailsForm?: NgForm;
-  
- 
-
   constructor(
     private readonly route: ActivatedRoute, private bookingservice:BookingService,
     private snackbar:MatSnackBar,
     private router: Router) { }
 
+    //Get data with singal id
   ngOnInit(): void {
     this.route.paramMap.subscribe(
       (params) => {
@@ -60,6 +56,7 @@ export class AddPateintComponent implements OnInit {
 }  );
   }
 
+//Update the data
   onUpdate():void{
     
     {

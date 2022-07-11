@@ -4,3 +4,17 @@
 .carouselExampleIndicators{
   padding: auto;
 }
+
+#btn{
+
+  text-align: center;
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 60%;
+
+  margin: auto;
+
+}

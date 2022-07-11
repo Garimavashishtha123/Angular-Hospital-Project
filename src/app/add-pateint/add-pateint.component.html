@@ -14,7 +14,7 @@
  
 <div class="row top-row" id="formtable">
   <div class="col-md-6">
-    <form class=form1 #studentDetailsForm="ngForm">
+    <form class=form1 #bookdetailsForm="ngForm">
       <div class="row">
         <div class="col-md-6"> <!--Name Column-->
           <mat-form-field appearance="outline">
@@ -26,7 +26,7 @@
         <div class="col-md-6">   <!--Phone Column-->
           <mat-form-field appearance="outline">
             <mat-label>Mobile</mat-label>
-            <input type="text" matInput [(ngModel)]="bk.phone" name="phone">
+            <input type="text" matInput [(ngModel)]="bk.phone" name="phone" minlength="10" maxlength="10">
           </mat-form-field>
         </div>
       </div>
@@ -43,15 +43,15 @@
            <mat-form-field appearance="outline">
              <mat-label>{{bk.dob}}</mat-label>
             <input type="date" matInput id="date" name="date">
-          </mat-form-field>
-        </div>
+          </mat-form-field> -->
+         </div>
     </div>
 
-    <div class="row">        <!--Third Row-->
+    <div class="row">       <!-- Third Row-->
       <div class="col-xs-4"> <!--Appointment date Column-->
         <mat-form-field appearance="outline">
           <mat-label>{{bk.appdate}}</mat-label>
-          <input matInput [matDatepicker]="picker" [(ngModel)]="bk.appdate" name="appdate">
+          <input matInput [matDatepicker]="picker" [(ngModel)]="bk.appdate" name="appdate" min="2022-07-05">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
@@ -68,9 +68,13 @@
             <mat-form-field appearance="outline">
               <mat-label>Choose Doctor:</mat-label>
               <select matNativeControl [(ngModel)]="bk.dname" name="dname">
-                <option value="Morning 8AM-12PM">Ashok Patil</option>
-                <option value="Afternoon 2PM-4PM">Pramod Bansal</option>
-                <option value="Evening 6PM-8PM">Shivani Mishra</option>
+                <option value="Makhdum Kazi">Makhdum Kazi</option>
+          <option value="AP Chitre">AP Chitre</option>
+          <option value="Raj Patil">Raj Patil</option>
+          <option value="Raj Patil">Nadeem Patel</option>
+          <option value="Raj Patil">Ajay Pandey</option>
+          <option value="Raj Patil">Loya Seth</option>
+          <option value="MEnuka Magar">Menuka Magar</option>
               </select>
             </mat-form-field>
         </div>
